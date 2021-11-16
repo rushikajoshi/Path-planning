@@ -29,33 +29,35 @@ It is essential to develop techniques that allow a robot or any vehicle to autom
 Following are some of the motion planning algorithms implemented on 2D space.
 
 ### Generating a configuration space
-Since, in the real world, most of the robots move continuously through space, therefore, it is essential to have a complete specification of the position of every point in the system for motion planning. The configuration space of a robot is the set of all configurations and/or positions that the robot can attain.
-![](LINK)
+Since, in the real world, most of the robots move continuously through space, therefore, it is essential to have a complete specification of the position of every point in the system for motion planning. The configuration space of a robot is the set of all configurations and/or positions that the robot can attain. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Configuration%20Space.jpg" width="360px">
 
 ### A* algorithm
-It is used to calculate the shortest distance between the source (initial state) and the destination (final state). Here, a square grid is provided as a map which possesses many obstacles, scattered randomly. The initial and the final cells are known. The aim is to reach the final cell in the shortest amount of time.
-![](LINK)
+It is used to calculate the shortest distance between the source (initial state) and the destination (final state). Here, a square grid is provided as a map which possesses many obstacles, scattered randomly. The initial and the final cells are known. The aim is to reach the final cell in the shortest amount of time. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Astar.gif" width="360px">
 
 
 ### Dijkstra's algorithm
-It finds a shortest path tree from a single source node, by building a set of nodes that have minimum distance from the source. It has been found that A* is a more time efficient approach as it chooses which node to explore at the next iteration.
-![](LINK)
+It finds a shortest path tree from a single source node, by building a set of nodes that have minimum distance from the source. It has been found that A* is a more time efficient approach as it chooses which node to explore at the next iteration. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Dijkstra.gif" width="360px">
 
 ### Potential field based planning
 The artificial potential field repels the robot from obstacles and guides it to the desired location. A total potential function is generated as a sum of attractive and repulsive potential functions based on configuration space. The robot then continually evaluates the gradient of the artificial potential field and steps in that direction until it is close enough to the desired goal. 
 
 #### 1) Attractive, Repulsive and total potential field
-These fields are constructed based on a function that gives high values as it approaches towards the obstacles and low values as it moves away from them.
-![](LINK) ![](LINK) ![](LINK)
+These fields are constructed based on a function that gives high values as it approaches towards the obstacles and low values as it moves away from them. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Attractive%20Potential.jpg" width="360px">
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Repulsive%20potential.jpg" width="360px">
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Total%20Potential.jpg" width="360px">
 
 
 #### 2) Generating quiver plot
-It is an alternate method to depict the same information, where the arrows indicate the direction of the gradient field at various locations in the configuration space.
-![](LINK)
+It is an alternate method to depict the same information, where the arrows indicate the direction of the gradient field at various locations in the configuration space. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Quiver%20plot.jpg" width="360px">
 
 #### 3) Gradient based control
-The robot is steered by choosing the velocity based on the gradient of the total function.
-![](LINK)
+The robot is steered by choosing the velocity based on the gradient of the total function. \
+<img src="https://github.com/rushikajoshi/Path-planning/blob/main/Results/Gradient%20Based%20Planner.gif" width="360px">
 
 ## References
 
